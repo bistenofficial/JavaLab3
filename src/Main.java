@@ -9,14 +9,16 @@ import java.util.Set;
 public class Main
 {
     public static void main(String[] args) {
-        ArrayList<String> Key = new ArrayList<String>();
-        ArrayList<String> Count = new ArrayList<String>();
-        try (BufferedReader br = new BufferedReader(new FileReader("src/Input")))
+        ArrayList<String> Key = new ArrayList<String>();// Создаем массив ключей
+        ArrayList<String> Count = new ArrayList<String>();// Создаем массив кол-ва
+        try (BufferedReader br = new BufferedReader(new FileReader("src/Input")))//Читаем файл Input.txt и читаем текст из потока ввода символов, буферизуя прочитанные символы
         {
             String s;
-            while ((s = br.readLine()) != null) {
-                String[] Values = s.split(" ");
-                if (Values.length > 1) {
+            while ((s = br.readLine()) != null)//Пока нет пустой строки
+            {
+                String[] Values = s.split(" ");//
+                if (Values.length > 1)//
+                {
                     Key.add(Values[0]);
                     Count.add(Values[1]);
                 }
